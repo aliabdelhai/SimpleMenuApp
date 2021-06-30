@@ -1,4 +1,4 @@
-# Simple Menu Application - 
+# Simple Menu Application 
 FullStack JavaScript development with MobX
 
 A simple web application written in React, which serves restaurants menus.
@@ -34,7 +34,9 @@ node server.js
 
 ### Screenshots
 
-## <p align="center"><img src="https://res.cloudinary.com/dnngdbnuq/image/upload/v1612105099/Screen_Shot_2021-01-31_at_4.57.27_PM_jvatth.png" width="300"> </p>
-## <p align="center"><img src="https://res.cloudinary.com/dnngdbnuq/image/upload/v1612105182/Screen_Shot_2021-01-31_at_4.57.47_PM_q3glyh.png" width="300"> </p>
-## <p align="center"><img src="https://res.cloudinary.com/dnngdbnuq/image/upload/v1612105189/Screen_Shot_2021-01-31_at_4.57.57_PM_pvvk3z.png" width="300"> </p>
+## <p align="center"><img src="https://res.cloudinary.com/dnngdbnuq/image/upload/v1625079199/Screen_Shot_2021-06-30_at_9.52.57_PM_p7gvme.png" width="300"> </p>
+## <p align="center"><img src="https://res.cloudinary.com/dnngdbnuq/image/upload/v1625070853/Screen_Shot_2021-06-30_at_7.29.03_PM_iqzt3f.png" width="300"> </p>
+## <p align="center"><img src="https://res.cloudinary.com/dnngdbnuq/image/upload/v1625070861/Screen_Shot_2021-06-30_at_7.29.24_PM_xc5v5o.png" width="300"> </p>
+## <p align="center"><img src="https://res.cloudinary.com/dnngdbnuq/image/upload/v1625070647/Screen_Shot_2021-06-30_at_7.29.37_PM_kphcjv.png" width="300"> </p>
+
 
