@@ -56,7 +56,7 @@ export default function BackToTop(props) {
       <CssBaseline />
       <AppBar>
         <Toolbar>
-        <Link id='resName' to="/"> <Typography  variant="h6">ALI'S MENU APP</Typography></Link>
+        <Link className='btn' to="/"> <Typography  variant="h6">ALI'S MENU APP</Typography></Link>
         </Toolbar>
       </AppBar>
       <Toolbar id="back-to-top-anchor" />

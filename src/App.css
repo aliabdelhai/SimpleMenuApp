@@ -22,10 +22,12 @@
     width: 25em;
 }
 
-#resName{
-    cursor: pointer;
-    color: black;
-    text-decoration: none;
 
+
+.btn{
+    cursor: pointer;
+    color: rgb(136, 32, 32);
+    text-decoration: none;
+    
 }
 

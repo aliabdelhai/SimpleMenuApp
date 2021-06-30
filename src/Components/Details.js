@@ -84,10 +84,10 @@ function Details(props) {
             {isAdmin == 'true' ?
                 <center>
                     <div className={classes.btn}>
-                        <Button variant="contained" color="primary"><Link to={`/edit/${restaurantId}/admin`}>
+                        <Button variant="contained" color="primary"><Link className='btn' to={`/edit/${restaurantId}/admin`}>
                             EDIT </Link>
                         </Button>
-                        <Button variant="contained" color="primary"><Link to={`/add/${restaurantId}/admin`}>
+                        <Button variant="contained" color="primary"><Link className='btn' to={`/add/${restaurantId}/admin`}>
                             ADD </Link>
                         </Button>
                     </div>
