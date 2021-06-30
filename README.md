@@ -3,7 +3,7 @@ FullStack JavaScript development with MobX
 
 A simple web application written in React, which serves restaurants menus.
 The front-end use HTML5 technologies: HTML5, CSS, React.JS 
-The back-end use JavaScript technologies: Node.js, Express.js, SQL database.
+The back-end use JavaScript technologies: Node.js, Express.js, Mongo database.
 
 ## Requirements
 
