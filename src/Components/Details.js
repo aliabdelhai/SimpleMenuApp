@@ -10,8 +10,6 @@ import { Link } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 
-
-
 const useStyles = makeStyles((theme) => ({
     root: {
         maxWidth: 270,
@@ -50,17 +48,14 @@ function Details(props) {
 
     const classes = useStyles();
     const currentRestaurant = props.restaurantsStore.getCurrentRestaurant;
-    console.log(currentRestaurant.menuName)
 
 
     return (
-
         <div className="restaurantDetail">
             <h3 className="title">{currentRestaurant.name}</h3>
             {currentRestaurant.hasMenu ? <div className="subTitle">{currentRestaurant.menuName}</div> : <div className="subTitle">{"There is no menu"}</div>}
             <br></br>
             {
-
                 <Grid container direction="row" justify="space-evenly" spacing={3}>
                     {
                         currentRestaurant.menu?.map(v => (
@@ -78,7 +73,6 @@ function Details(props) {
                                                 {"price: "}{v.price}{' USD'}
                                             </Typography>
                                         </CardContent>
-
                                     </CardActionArea>
                                 </Card>
                             </Grid>

@@ -8,8 +8,9 @@ function AddDish(props) {
 
     const [input, setInput] = useState({ name: "", price: "", img: "" })
     const [sh, setSh] = useState({ show: false, showing: false })
+
     const add = (input, id) => {
-        if(input.name == "" || input.price == "" || input.img == ""){
+        if (input.name == "" || input.price == "" || input.img == "") {
             alert('please fill all required fields!')
             return;
         }
@@ -61,6 +62,5 @@ function AddDish(props) {
         </div>
     );
 }
-
 
 export default inject("restaurantsStore")(observer(AddDish))

@@ -20,7 +20,9 @@ const useStyles = makeStyles({
 		height: 134
 	},
 	header: {
-		color: 'green'
+		color: 'green',
+		cursor: 'pointer',
+		textDecoration: 'none'
 	}
 });
 
@@ -36,7 +38,7 @@ export default function Restaurant(props) {
 						<img alt="img" className={classes.media} src={props.restaurant.img} />
 					</CardMedia>
 					<CardContent className={classes.textHeight}>
-						<Typography noWrap variant="h6" component="h2" className={classes.header}>
+						<Typography variant="h6" component="h2" className={classes.header}>
 							{props.restaurant.name}
 						</Typography>
 					</CardContent>

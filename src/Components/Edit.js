@@ -33,17 +33,14 @@ function Edit(props) {
         setTimeout(() => {
             setSh({ show: false, showing: false });
         }, 2000);
-       
     }
 
     return (
-
         <div className="restaurantDetail">
             <center><br></br>
                 {"Restaurant Name: "}<input className="title" placeholder={currentRestaurant.name} value={restaurant.name}
                     onChange={({ target }) => setRestaurant(state => ({ ...state, name: target.value }))}
                 />
-
                 {currentRestaurant.hasMenu ? <div><br></br>{"Menu Name: "}<input className="subTitle" placeholder={currentRestaurant.menuName} value={restaurant.menuName}
                     onChange={({ target }) => setRestaurant(state => ({ ...state, menuName: target.value }))}
                 /></div> : <div className="subTitle">{"There is no menu"}</div>} </center>
@@ -54,8 +51,6 @@ function Edit(props) {
                     </ReactSnackBar>
                 </Button><br></br></center> <br></br>
             {
-
-
                 <Grid container direction="row" justify="space-evenly" spacing={3}>
                     {
                         currentRestaurant.menu?.map(v => (

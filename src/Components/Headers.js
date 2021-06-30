@@ -56,11 +56,10 @@ export default function BackToTop(props) {
       <CssBaseline />
       <AppBar>
         <Toolbar>
-        <Link to="/"> <Typography variant="h6">Ali's Restaurant</Typography></Link>
+        <Link id='resName' to="/"> <Typography  variant="h6">ALI'S MENU APP</Typography></Link>
         </Toolbar>
       </AppBar>
       <Toolbar id="back-to-top-anchor" />
-      
       <ScrollTop {...props}>
         <Fab color="secondary" size="small" aria-label="scroll back to top">
           <KeyboardArrowUpIcon />

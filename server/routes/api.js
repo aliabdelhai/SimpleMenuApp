@@ -3,11 +3,9 @@ const Restaurant = require('../models/Restaurant')
 const Dish = require('../models/Dish')
 const router = express.Router()
 
-
 router.get('/', (req, res) => {
     res.status(200).send({ status: "server working" })
 })
-
 
 router.post('/restaurants', (req, res) => {
     if (req.query.isAdmin) {
@@ -30,7 +28,7 @@ router.get('/restaurants/:page', (req, res) => {
     if (req.query.hasMenu) {
         filter = { hasMenu: true }
     }
-    Restaurant.find(filter).skip((page-1)*6).limit(6).populate("menu").exec(function (err, restaurants) {
+    Restaurant.find(filter).skip((page-1)*5).limit(5).populate("menu").exec(function (err, restaurants) {
         if (err)
             res.status(400).send(err.message);
         else
@@ -47,7 +45,6 @@ router.get('/restaurant/:id', (req, res) => {
             res.status(200).send({ restaurants });
     })
 })
-
 
 router.post('/dishes/:restaurantId', (req, res) => {
     if (req.query.isAdmin) {
@@ -88,7 +85,6 @@ router.put('/restaurants/:id', async (req, res) => {
     }
 })
 
-
 router.put('/dishes/:id', async (req, res) => {
     const id = req.params.id
     if (req.query.isAdmin) {
@@ -102,7 +98,6 @@ router.put('/dishes/:id', async (req, res) => {
     else {
         res.send('only admins can edit menus')
     }
-
 })
 
 router.delete('/dishes/:id', async (req, res) => {
@@ -119,6 +114,5 @@ router.delete('/dishes/:id', async (req, res) => {
         res.send('only admins can edit menus')
     }
 })
-
 
 module.exports = router

@@ -7,8 +7,9 @@ function AddRestaurant(props) {
 
     const [input, setInput] = useState({ name: "", menuName: "", img: "" })
     const [sh, setSh] = useState({ show: false, showing: false })
+    
     const add = (input) => {
-        if(input.name == "" || input.menuName == "" || input.img == ""){
+        if (input.name == "" || input.menuName == "" || input.img == "") {
             alert('please fill all required fields!')
             return;
         }

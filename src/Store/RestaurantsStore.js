@@ -48,7 +48,6 @@ export default class RestaurantsStore {
         await axios.put(`/dishes/${id}/?isAdmin=true`, { dish });
     }
 
-
     async deleteDish(id) {
         await axios.delete(`/dishes/${id}/?isAdmin=true`)
         const index = this.currentRestaurant.menu?.findIndex(d => d._id === id)
@@ -60,7 +59,6 @@ export default class RestaurantsStore {
         return this.currentRestaurant;
     }
 
-
     get getRestaurants() {
         return this.restaurants
     }
@@ -69,7 +67,6 @@ export default class RestaurantsStore {
         const result = await axios.get(`/restaurant/${restaurantId}`)
         this.currentRestaurant = result.data.restaurants;
         console.log(this.currentRestaurant.length)
-
     }
 
     async loadRestaurantsFromDB(page) {

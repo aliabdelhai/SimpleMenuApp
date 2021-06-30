@@ -63,6 +63,7 @@ h3{
     margin-bottom: 1.5em;
 
 }
+
 .updateWrapper{
     display: grid;
     grid-template-columns: 2fr 1fr 1fr 7fr;
@@ -80,3 +81,4 @@ h3{
     font-weight: 800;
     font-size: 0.85em;
 }
+

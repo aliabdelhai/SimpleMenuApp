@@ -1,5 +1,4 @@
 const mongoose = require('mongoose')
-
 const Schema = mongoose.Schema
 
 const dish = new Schema({
@@ -9,5 +8,4 @@ const dish = new Schema({
 })
 
 const Dish = mongoose.model('Dish', dish)
-
 module.exports = Dish

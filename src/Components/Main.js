@@ -13,28 +13,34 @@ const useStyles = makeStyles((theme) => ({
         '& > *': {
             marginTop: theme.spacing(2),
         },
+
     },
 }));
 
 function Main(props) {
     const [withMenu, setCheck] = useState(false);
     const [page, setPage] = React.useState(1);
+
     const handleChange = (event, value) => {
         setPage(value);
-      };
+    };
+
     useEffect(() => {
         withMenu ? props.restaurantsStore.loadRestaurantsWithMenu(page) : props.restaurantsStore.loadRestaurantsFromDB(page)
 
     }, [page, withMenu])
     const classes = useStyles();
-    
-   
+
     return (
         <div>
-            <FormControlLabel
-                control={<Checkbox checked={withMenu} onChange={() => setCheck(!withMenu)} name="withMenu" />}
-                label="With Menu"
-            />
+            <h3 className="title">Restaurants</h3>
+            <div className="subTitle">
+                <FormControlLabel
+                    control={<Checkbox checked={withMenu} onChange={() => setCheck(!withMenu)} name="withMenu" />}
+                    label="With Menu"
+                />
+            </div>
+
             <div>
                 <Grid container direction="row" justify="space-evenly" spacing={6}>
                     {
@@ -47,10 +53,9 @@ function Main(props) {
                 </Grid>
             </div>
             <br></br><div className={classes.root}>
-                <Pagination count={3} color="primary" page={page} onChange={handleChange}  />
-                </div>
-            <br></br> 
-           
+                <Pagination id='pages' count={4} color="primary" page={page} onChange={handleChange} />
+            </div>
+            <br></br>
         </div>
 
     );
