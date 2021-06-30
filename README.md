@@ -1,4 +1,5 @@
-# Simple Menu Application - FullStack JavaScript development with MobX
+# Simple Menu Application - 
+FullStack JavaScript development with MobX
 
 A simple web application written in React, which serves restaurants menus.
 The front-end use HTML5 technologies: HTML5, CSS, React.JS 
