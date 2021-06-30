@@ -34,9 +34,9 @@ node server.js
 
 ### Screenshots
 
-## <p align="center"><img src="https://res.cloudinary.com/dnngdbnuq/image/upload/v1625079199/Screen_Shot_2021-06-30_at_9.52.57_PM_p7gvme.png" width="300"> </p>
-## <p align="center"><img src="https://res.cloudinary.com/dnngdbnuq/image/upload/v1625070853/Screen_Shot_2021-06-30_at_7.29.03_PM_iqzt3f.png" width="300"> </p>
-## <p align="center"><img src="https://res.cloudinary.com/dnngdbnuq/image/upload/v1625070861/Screen_Shot_2021-06-30_at_7.29.24_PM_xc5v5o.png" width="300"> </p>
-## <p align="center"><img src="https://res.cloudinary.com/dnngdbnuq/image/upload/v1625070647/Screen_Shot_2021-06-30_at_7.29.37_PM_kphcjv.png" width="300"> </p>
+## <p align="center"><img src="https://res.cloudinary.com/dnngdbnuq/image/upload/v1625079456/Screen_Shot_2021-06-30_at_9.56.13_PM_qy2cjc.png" width="300"> </p>
+## <p align="center"><img src="https://res.cloudinary.com/dnngdbnuq/image/upload/v1625079464/Screen_Shot_2021-06-30_at_9.56.33_PM_bvrazh.png" width="300"> </p>
+## <p align="center"><img src="https://res.cloudinary.com/dnngdbnuq/image/upload/v1625079465/Screen_Shot_2021-06-30_at_9.56.53_PM_gxgav2.png" width="300"> </p>
+## <p align="center"><img src="https://res.cloudinary.com/dnngdbnuq/image/upload/v1625079458/Screen_Shot_2021-06-30_at_9.57.11_PM_udrrdu.png" width="300"> </p>
 
 
