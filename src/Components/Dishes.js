@@ -64,12 +64,12 @@ function Dishes(props) {
                     </CardMedia>
                     <CardContent className={classes.textHeight}>
                         <Typography noWrap variant="h6" component="h2" className={classes.header}>
-                            {"name: "}<input placeholder={props.dish.name} value={dish.name}
+                            <input placeholder={props.dish.name} value={dish.name}
                                 onChange={({ target }) => setDish(state => ({ ...state, name: target.value }))}
                             />
                         </Typography>
                         <Typography noWrap variant="h6" component="h2" className={classes.header}>
-                            {"price: "}<input type="text" id="fname" placeholder={props.dish.price} value={dish.price}
+                            <input type="text" id="fname" placeholder={props.dish.price} value={dish.price}
                                 onChange={({ target }) => setDish(state => ({ ...state, price: target.value }))} name="fname" />
                         </Typography>
                     </CardContent>

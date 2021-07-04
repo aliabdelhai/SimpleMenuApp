@@ -5,10 +5,15 @@ export default class RestaurantsStore {
     constructor() {
         this.currentRestaurant = {}
         this.restaurants = []
+        this.length = 0;
         makeObservable(this, {
             restaurants: observable,
+            length: observable,
             currentRestaurant: observable,
+            restaurantsLength: action,
+            restaurantsWithMenuLength: action,
             getCurrentRestaurant: computed,
+            getLength: computed,
             loadRestaurantFromDB: action,
             addRestaurant: action,
             addDish: action,
@@ -24,7 +29,7 @@ export default class RestaurantsStore {
     async addRestaurant(input) {
         const restaurant = {
             restaurant: {
-                name: input.name, menuName: input.menuName, img: input.img, menu: [], hasMenu: false
+                name: input.name, menuName: input.menuName, img: input.img, menu: [], hasMenu: false, genre: input.genre, location: input.location, description: input.description
             }
         }
         await axios.post("/restaurants/?isAdmin=true", restaurant)
@@ -53,6 +58,20 @@ export default class RestaurantsStore {
         const index = this.currentRestaurant.menu?.findIndex(d => d._id === id)
         if (index !== -1) this.currentRestaurant.menu.splice(index, 1);
 
+    }
+
+    get getLength(){
+        return this.length
+    }
+
+    async restaurantsLength() {
+        const restaurants = await axios.get(`/restaurants`)
+        this.length = restaurants.data.length;
+    }
+
+    async restaurantsWithMenuLength() {
+        const restaurants = await axios.get(`/restaurants/?hasMenu=true`)
+        this.length = restaurants.data.length;
     }
 
     get getCurrentRestaurant() {

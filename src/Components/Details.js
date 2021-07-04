@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { observer, inject } from 'mobx-react'
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
@@ -9,6 +9,7 @@ import Grid from '@material-ui/core/Grid';
 import { Link } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
+import CircularProgress from '@material-ui/core/CircularProgress';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -28,12 +29,19 @@ const useStyles = makeStyles((theme) => ({
         '& > *': {
             margin: theme.spacing(1),
         }
+    },
+    allCenter: {
+        margin: '10% auto',
+        textAlign: 'center'
     }
 }));
 
 let isAdmin = false;
 
 function Details(props) {
+    const [spinner, setSpinner] = useState(true);
+
+
     const restaurantId = props.match.params.id;
     const urlParams = new URLSearchParams(window.location.search);
     isAdmin = urlParams.get('isAdmin');
@@ -43,6 +51,8 @@ function Details(props) {
     }
 
     useEffect(() => {
+        setTimeout(() => setSpinner(false), 1000)
+
         getRestaurant(restaurantId)
     }, [])
 
@@ -52,10 +62,11 @@ function Details(props) {
 
     return (
         <div className="restaurantDetail">
-            <h3 className="title">{currentRestaurant.name}</h3>
-            {currentRestaurant.hasMenu ? <div className="subTitle">{currentRestaurant.menuName}</div> : <div className="subTitle">{"There is no menu"}</div>}
-            <br></br>
-            {
+            {spinner ? <div className={classes.allCenter}><CircularProgress /> </div> : <div>
+                <h3 className="title">{currentRestaurant.name}</h3>
+                {currentRestaurant.hasMenu ? <div className="subTitle">{currentRestaurant.menuName}</div> : <div className="subTitle">{"There is no menu"}</div>}
+                <br></br>
+
                 <Grid container direction="row" justify="space-evenly" spacing={3}>
                     {
                         currentRestaurant.menu?.map(v => (
@@ -79,20 +90,25 @@ function Details(props) {
                         ))
                     }
                 </Grid>
+
+                <br></br>
+                {isAdmin == 'true' ? <div>
+                    <center>
+
+                        <div className={classes.btn}>
+                            <Button variant="contained" color="primary"><Link className='btn' to={`/edit/${restaurantId}/admin`}>
+                                EDIT </Link>
+                            </Button>
+                            <Button variant="contained" color="primary"><Link className='btn' to={`/add/${restaurantId}/admin`}>
+                                ADD </Link>
+                            </Button>
+                        </div>
+                    </center></div>
+                    : null
+                }
+            </div>
             }
-            <br></br>
-            {isAdmin == 'true' ?
-                <center>
-                    <div className={classes.btn}>
-                        <Button variant="contained" color="primary"><Link className='btn' to={`/edit/${restaurantId}/admin`}>
-                            EDIT </Link>
-                        </Button>
-                        <Button variant="contained" color="primary"><Link className='btn' to={`/add/${restaurantId}/admin`}>
-                            ADD </Link>
-                        </Button>
-                    </div>
-                </center>
-                : null}
+
 
         </div>
     );

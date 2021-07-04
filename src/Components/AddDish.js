@@ -25,7 +25,7 @@ function AddDish(props) {
     return (
         <div id="Add-dish">
             <h3>Add Dish</h3>
-            <div id="Add-item">
+            <div className="Add-item">
                 <div className="addwrapper" >
                     Name:
                     <input

@@ -1,19 +1,4 @@
-.selectInput {
-    width: 10vw;
-    border: none;
-    border-bottom: 2px solid rgba(209, 207, 207, 0.75);
-    outline: none;
-    color: black;
-    background-color: #ecf0f1;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 500;
-    font-size: 18px;
 
-}
-.selectInput::placeholder{
-font-size: 0.8em;
-
-}
 
 .addInput {
     width: 10vw;
@@ -50,8 +35,8 @@ grid-template-columns: 1fr 1fr 8fr;
 margin: 1em;
 }
 
-#Add-item{
-margin: 2em;
+.Add-item{
+margin: 1em;
 }
 
 #Update{
@@ -59,8 +44,7 @@ margin: 2em;
 }
 
 h3{
-    margin: 1em;
-    margin-bottom: 1.5em;
+    margin: 1.2em;
 
 }
 
@@ -82,3 +66,6 @@ h3{
     font-size: 0.85em;
 }
 
+body{
+    background-color: rgb(232, 226, 243) !important;
+}

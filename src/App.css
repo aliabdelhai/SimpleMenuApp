@@ -6,28 +6,31 @@
     width: 13em;
     color: #7c795d;
     font-family: 'Trocchi', serif;
-    font-size: 45px;
+    font-size: 30px;
     font-weight: normal; 
     line-height: 48px; 
 }
 
 .subTitle { 
     font-size: 20px; 
-    font-weight: 300; 
     color: #ffcc66; 
     text-align: center;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
     width: 25em;
+    font-weight: bold;
 }
-
 
 
 .btn{
     cursor: pointer;
-    color: rgb(136, 32, 32);
+    color: rgb(235, 250, 31);
     text-decoration: none;
     
+}
+
+.results{
+    margin: 50px;
 }
 
